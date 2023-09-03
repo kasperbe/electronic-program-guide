@@ -39,9 +39,9 @@ I scanned through the document multiple times, but could not find anything menti
 
 ## Rethinking the Datamodel
 
-#### Locale
+#### Time
 The current datamodel comes with a few challenges, most importantly when dealing with time. The data can be laid out in a multitude of ways, however the way time is currently being managed would lead to curiosities when mixing locales, for example:
-We send in a model with time 3600 on a monday, but I am in a Datamodel-6 timezone. This entry should no longer belong to a monday but drop back to a sunday.
+We send in a model with time 3600 on a monday, but I am in a timezone that's 6 hours behind the timezone of the datamodel. This entry should no longer belong to a monday but drop back to a sunday.
 
 The problem here is that normally Unix timestamp are absolute from a specific point in time, but here we keep resetting the time per day, thus losing the absolute trait, and become dependant on being within the same day.
 
