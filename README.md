@@ -1,4 +1,4 @@
-# Electronic program guidereadme
+# Electronic program guide
 
 I chose to implement this in Go, thinking Go being so simple, everyone can read it.
 I could probably have done a lot of things smarter by choosing a language that supports some functional paradigms, but I think the code came out pretty simple in the end.
@@ -13,7 +13,15 @@ docker run -it -p 8080:8080 epg-service
 
 We can then simply hit the service using for example curl:
 ```
-curl -vX POST http://localhost:8080 -d @payload.json
+curl -v http://localhost:8080 -d @payload.json
+
+Monday: Nyhederne 7 - 11 / Dybvaaaaad 11 - 1,11:35 - 1
+Tuesday: Nothing aired today
+Wednesday: Nyhederne 7 - 13,22 - 22:30 / Fodbold 15 - 16:30
+Thursday: ESL 13 - 14 / ESLPro 0 - 2
+Friday: Nothing aired today
+Saturday: Comedy 15:30 - 17:30 / Nybyggerne 23:40 - 2:30
+Sunday: Dybvvvvvad 12:30 - 13
 ```
 
 ## Assumptions

@@ -94,12 +94,12 @@ func (epg *EPG) ToString() string {
 	out := ""
 
 	for day, program := range epg.program {
+		out += formatDayIndexToString(day)
+
 		if len(program) == 0 {
 			out += "Nothing aired today\n"
 			continue
 		}
-
-		out += formatDayIndexToString(day)
 
 		for i, slot := range program {
 			times := []string{}
@@ -143,7 +143,7 @@ func formatDayIndexToString(day int) string {
 	case 4:
 		return "Friday: "
 	case 5:
-		return "Satuday: "
+		return "Saturday: "
 	case 6:
 		return "Sunday: "
 	default:

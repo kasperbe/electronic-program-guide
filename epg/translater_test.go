@@ -182,11 +182,11 @@ func TestTranslateToString(t *testing.T) {
 	}
 
 	expected := `Monday: Nyhederne 7 - 11 / Dybvaaaaad 11 - 11:35
-Nothing aired today
+Tuesday: Nothing aired today
 Wednesday: Nyhederne 7 - 13,22 - 22:30 / Fodbold 15 - 16:30
 Thursday: ESL 13 - 14 / ESLPro 0 - 2
-Nothing aired today
-Satuday: Comedy 15:30 - 17:30 / Nybyggerne 23:40 - 2:30
+Friday: Nothing aired today
+Saturday: Comedy 15:30 - 17:30 / Nybyggerne 23:40 - 2:30
 Sunday: Dybvvvvvad 12:30 - 13`
 
 	assert.Equal(t, expected, pg.ToString())

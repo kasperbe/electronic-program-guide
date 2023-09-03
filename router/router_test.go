@@ -54,13 +54,13 @@ func TestEmptyPayload(t *testing.T) {
 		t.Logf("read all: %v\n", err)
 	}
 
-	expected := `Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today`
+	expected := `Monday: Nothing aired today
+Tuesday: Nothing aired today
+Wednesday: Nothing aired today
+Thursday: Nothing aired today
+Friday: Nothing aired today
+Saturday: Nothing aired today
+Sunday: Nothing aired today`
 
 	assert.Equal(t, expected, string(data))
 }
@@ -93,12 +93,12 @@ func TestWithPayload(t *testing.T) {
 	}
 
 	expected := `Monday: Nyhederne 7 - 11
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today
-Nothing aired today`
+Tuesday: Nothing aired today
+Wednesday: Nothing aired today
+Thursday: Nothing aired today
+Friday: Nothing aired today
+Saturday: Nothing aired today
+Sunday: Nothing aired today`
 
 	assert.Equal(t, expected, string(data))
 }
